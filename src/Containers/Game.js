@@ -25,9 +25,9 @@ export default class Game extends React.Component{
         let i=coord[0];
         let j=coord[1];
         this.setMatrix(i,j,this.state.turn==='Player 1'?this.state.player1:this.state.player2);
-        if(this.state.moves>=5){
+        if(this.state.moves>=4){
         let win=this.gameOver();
-        if(win===0 && this.state.moves>=9)
+        if(win===0 && this.state.moves>=8)
        {
         this.setState({...this.state,over:true,winner:'draw'}); //draw
        }
